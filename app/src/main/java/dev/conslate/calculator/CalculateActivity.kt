@@ -25,23 +25,12 @@ class CalculateActivity : AppCompatActivity() {
         tvTotality=findViewById(R.id.tvTotality)
         etFirstNumber=findViewById(R.id.etFirstNumber)
         etSecondNo=findViewById(R.id.etSecondNo)
-//
-            val First=etFirstNumber.text.toString()
-            val Second=etSecondNo.text.toString()
-            if (First.isBlank()){
-                etFirstNumber.setError("Input Number")
-            }
-            if (Second.isBlank()){
-                etSecondNo.setError("Input Number")
-            }
 
         btnAdd.setOnClickListener {
             tvTotality.text=""
             val number1=etFirstNumber.text.toString().toDouble()
             val number2=etSecondNo.text.toString().toDouble()
             addition(number1,number2)
-
-
         }
         btnSubst.setOnClickListener {
             tvTotality.text=""
